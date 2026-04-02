@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DiverseCraft.pl – Domena Premium na sprzedaż</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: radial-gradient(circle at top, #111 0%, #000 100%);
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        .gold { color: #d4af37; }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5em;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            animation: fadeIn 1.5s ease;
+        }
+
+        h2 {
+            font-size: 1.3em;
+            color: #aaa;
+            margin-bottom: 30px;
+            animation: fadeIn 2s ease;
+        }
+
+        .card {
+            background: linear-gradient(145deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+            border: 1px solid rgba(212,175,55,0.2);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 600px;
+            width: 100%;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 0 40px rgba(212,175,55,0.15);
+            animation: slideUp 1.5s ease;
+        }
+
+        .price {
+            font-size: 1.8em;
+            margin: 20px 0;
+            color: #d4af37;
+        }
+
+        form {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        input, textarea {
+            padding: 12px;
+            border-radius: 10px;
+            border: none;
+            background: rgba(255,255,255,0.05);
+            color: white;
+            font-size: 1em;
+        }
+
+        input:focus, textarea:focus {
+            outline: 1px solid #d4af37;
+        }
+
+        button {
+            padding: 14px;
+            border: none;
+            border-radius: 10px;
+            background: linear-gradient(90deg, #d4af37, #f5d76e);
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(212,175,55,0.5);
+        }
+
+        .floating {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(212,175,55,0.2), transparent);
+            filter: blur(40px);
+            animation: float 10s infinite alternate ease-in-out;
+        }
+
+        .f1 { top: 10%; left: 10%; }
+        .f2 { bottom: 10%; right: 10%; animation-delay: 3s; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(60px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes float {
+            from { transform: translateY(0px) translateX(0px); }
+            to { transform: translateY(-50px) translateX(30px); }
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 0.8em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+<div class="floating f1"></div>
+<div class="floating f2"></div>
+
+<div class="container">
+    <h1><span class="gold">DiverseCraft.pl</span></h1>
+    <h2>Domena premium dostępna na sprzedaż</h2>
+
+    <div class="card">
+        <p>Ta domena może stać się fundamentem Twojego projektu, marki lub biznesu.</p>
+        <div class="price">Ceny zaczynają się od 10 zł</div>
+
+        <!-- FORMULARZ (DZIAŁAJĄCY PRZEZ FORMSPREE) -->
+        <form action="https://formspree.io/f/xojpnjgw" method="POST">
+            <input type="text" name="name" placeholder="Twoje imię" required>
+            <input type="email" name="email" placeholder="Twój email" required>
+            <textarea name="message" rows="4" placeholder="Twoja wiadomość (np. oferta zakupu)"></textarea>
+            <button type="submit">Wyślij zapytanie</button>
+        </form>
+
+        <p style="margin-top:15px; font-size:0.9em; color:#888;">
+            lub bezpośrednio: <span class="gold">adamikucz@int.pl</span>
+        </p>
+    </div>
+
+    <footer>
+        © 2026 DiverseCraft.pl — Wszystkie prawa zastrzeżone
+    </footer>
+</div>
+
+</body>
+</html>
